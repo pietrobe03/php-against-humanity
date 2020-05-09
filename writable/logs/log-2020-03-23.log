@@ -1,0 +1,31 @@
+CRITICAL - 2020-03-23 15:46:31 --> syntax error, unexpected '}'
+#0 /var/www/html/CI4/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute('GameAPI/status')
+#1 /var/www/html/CI4/system/CodeIgniter.php(785): CodeIgniter\Router\Router->handle('GameAPI/status')
+#2 /var/www/html/CI4/system/CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-03-23 15:46:33 --> syntax error, unexpected '}'
+#0 /var/www/html/CI4/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute('GameAPI/status')
+#1 /var/www/html/CI4/system/CodeIgniter.php(785): CodeIgniter\Router\Router->handle('GameAPI/status')
+#2 /var/www/html/CI4/system/CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-03-23 19:27:04 --> A non-numeric value encountered
+#0 /var/www/html/CI4/app/Controllers/Game.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', '/var/www/html/C...', 82, Array)
+#1 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\Game->lobby('undefined')
+#2 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Game))
+#3 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-03-23 20:48:28 --> Undefined variable: token
+#0 /var/www/html/CI4/app/Views/game/manage.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/var/www/html/C...', 56, Array)
+#1 /var/www/html/CI4/system/View/View.php(236): include('/var/www/html/C...')
+#2 /var/www/html/CI4/system/Common.php(1071): CodeIgniter\View\View->render('game/manage', Array, true)
+#3 /var/www/html/CI4/app/Controllers/Game.php(60): view('game/manage', Array)
+#4 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\Game->manage('uzrHC9xA')
+#5 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Game))
+#6 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

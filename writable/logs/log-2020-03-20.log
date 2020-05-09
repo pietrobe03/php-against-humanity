@@ -1,0 +1,53 @@
+CRITICAL - 2020-03-20 12:17:14 --> Call to undefined function get_cookie()
+#0 /var/www/html/CI4/app/Helpers/cah_helper.php(18): getUserSession()
+#1 /var/www/html/CI4/app/Controllers/Game.php(14): isLoggedIn()
+#2 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\Game->login()
+#3 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Game))
+#4 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-03-20 12:17:16 --> Call to undefined function get_cookie()
+#0 /var/www/html/CI4/app/Helpers/cah_helper.php(18): getUserSession()
+#1 /var/www/html/CI4/app/Controllers/Game.php(14): isLoggedIn()
+#2 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\Game->login()
+#3 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Game))
+#4 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-03-20 14:55:36 --> Undefined variable: title
+#0 /var/www/html/CI4/app/Views/templates/full.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/var/www/html/C...', 12, Array)
+#1 /var/www/html/CI4/system/View/View.php(236): include('/var/www/html/C...')
+#2 /var/www/html/CI4/system/View/View.php(247): CodeIgniter\View\View->render('templates/full', Array, true)
+#3 /var/www/html/CI4/system/Common.php(1071): CodeIgniter\View\View->render('game/index', Array, true)
+#4 /var/www/html/CI4/app/Controllers/Game.php(10): view('game/index')
+#5 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\Game->index()
+#6 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Game))
+#7 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-03-20 14:55:37 --> Undefined variable: title
+#0 /var/www/html/CI4/app/Views/templates/full.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/var/www/html/C...', 12, Array)
+#1 /var/www/html/CI4/system/View/View.php(236): include('/var/www/html/C...')
+#2 /var/www/html/CI4/system/View/View.php(247): CodeIgniter\View\View->render('templates/full', Array, true)
+#3 /var/www/html/CI4/system/Common.php(1071): CodeIgniter\View\View->render('game/index', Array, true)
+#4 /var/www/html/CI4/app/Controllers/Game.php(10): view('game/index')
+#5 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\Game->index()
+#6 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Game))
+#7 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-03-20 15:07:23 --> Call to undefined method CodeIgniter\View\View::partial()
+#0 /var/www/html/CI4/system/View/View.php(236): include()
+#1 /var/www/html/CI4/system/Common.php(1071): CodeIgniter\View\View->render('game/index', Array, true)
+#2 /var/www/html/CI4/app/Controllers/Game.php(13): view('game/index', Array)
+#3 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\Game->index()
+#4 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Game))
+#5 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-03-20 17:32:34 --> Call to a member function destroy() on null
+#0 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\GameAPI->logout()
+#1 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GameAPI))
+#2 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

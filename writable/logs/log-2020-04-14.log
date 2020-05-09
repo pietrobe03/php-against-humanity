@@ -1,0 +1,13 @@
+CRITICAL - 2020-04-14 14:10:05 --> Access denied for user '****'@'localhost' (using password: YES)
+#0 /var/www/html/CI4/system/Database/BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/CI4/system/Database/BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/CI4/system/Database/BaseBuilder.php(2798): CodeIgniter\Database\BaseConnection->query('DELETE FROM `Us...', Array, false)
+#3 /var/www/html/CI4/system/Model.php(937): CodeIgniter\Database\BaseBuilder->delete()
+#4 /var/www/html/CI4/app/Helpers/cleanup_helper.php(10): CodeIgniter\Model->delete()
+#5 /var/www/html/CI4/app/Helpers/cleanup_helper.php(4): cah_cleanup_users()
+#6 /var/www/html/CI4/app/Controllers/BaseController.php(51): cah_cleanup()
+#7 /var/www/html/CI4/system/CodeIgniter.php(883): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 /var/www/html/CI4/system/CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#9 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}

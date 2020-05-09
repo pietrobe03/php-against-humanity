@@ -1,0 +1,27 @@
+CRITICAL - 2020-03-27 20:22:42 --> syntax error, unexpected ')', expecting variable (T_VARIABLE) or '{' or '$'
+#0 /var/www/html/CI4/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute('GameAPI/status')
+#1 /var/www/html/CI4/system/CodeIgniter.php(785): CodeIgniter\Router\Router->handle('GameAPI/status')
+#2 /var/www/html/CI4/system/CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-03-27 20:30:41 --> Unknown column 'gameId' in 'where clause'
+#0 /var/www/html/CI4/system/Database/MySQLi/Connection.php(330): mysqli->query('UPDATE `Games` ...')
+#1 /var/www/html/CI4/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `Games` ...')
+#2 /var/www/html/CI4/system/Database/BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `Games` ...')
+#3 /var/www/html/CI4/system/Database/BaseBuilder.php(2410): CodeIgniter\Database\BaseConnection->query('UPDATE `Games` ...', Array, false)
+#4 /var/www/html/CI4/system/Model.php(851): CodeIgniter\Database\BaseBuilder->update()
+#5 /var/www/html/CI4/app/Controllers/GameAPI.php(550): CodeIgniter\Model->update()
+#6 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\GameAPI->startGame()
+#7 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GameAPI))
+#8 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-03-27 23:29:48 --> password_hash() expects at least 2 parameters, 1 given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'password_hash()...', '/var/www/html/C...', 169, Array)
+#1 /var/www/html/CI4/app/Controllers/GameAPI.php(169): password_hash('1234')
+#2 /var/www/html/CI4/system/CodeIgniter.php(910): App\Controllers\GameAPI->status()
+#3 /var/www/html/CI4/system/CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GameAPI))
+#4 /var/www/html/CI4/system/CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/CI4/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

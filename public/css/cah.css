@@ -1,0 +1,504 @@
+body {
+    color: #fff;
+    background: #111;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.cah-card-wrapper {
+    padding: 10px;
+    overflow: auto;
+    max-width: 400px;
+    width: 100%;
+}
+
+.cah-card {
+    color: #fff;
+    background: #303030 linear-gradient(180deg, #4f4f4f, #303030) repeat-x;
+    border-color: #303030;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 8px;
+}
+
+.cah-card-content {
+    position: absolute;
+    height: 100%;
+    padding: 12px;
+}
+
+.login-box {
+    margin: 0 auto;
+    margin-top: 32px;
+    font-size: 24px;
+}
+
+.login-box input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    width: calc(100% - 8px);
+}
+
+.login-box button {
+    position: absolute;
+    bottom: 24px;
+    right: 12px;
+}
+
+.login-box small {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff5c59;
+}
+
+@media screen and (max-width: 420px) {
+    .login-box, .login-box input {
+        font-size: calc(14px + 2vw);
+    }
+}
+
+.table th {
+    border-top: none;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.lobby-player-list {
+    max-width: 100%;
+}
+
+.lobby-player {
+    display: table;
+    height: 30px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #303030 !important;
+    margin-top: 4px;
+}
+
+.lobby-player .center {
+    display: table-cell !important;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.lobby-player .text-muted {
+    color: rgba(255,255,255,0.5) !important;
+}
+
+#cardpacks-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 350px;
+    overflow: auto;
+}
+
+#cardpacks-list .custom-control {
+    margin: 4px 16px;
+    text-wrap: none;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.66);
+    text-align: center;
+}
+
+#loader .spinner-border {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    position: fixed;
+    top: calc(50% - 2rem);
+    left: calc(50% - 2rem);
+}
+
+.navbar {
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+}
+
+/**
+ MOBILE GAME
+ */
+@media screen and (max-width: 767px), screen and (max-height: 780px) {
+    body {
+        min-width: 420px;
+    }
+
+    .game-wrapper, .flex-column {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .game-wrapper .game {
+        order: 2;
+        flex-grow: 1;
+        overflow: auto;
+        overflow: scroll;
+        margin-bottom: 82px;
+    }
+
+    .game-wrapper #player-list {
+        order: 1;
+        flex-grow: 1;
+        display: none;
+        overflow: scroll;
+    }
+
+    .game .judge-wait-wrapper,
+    .game .picking-wait-wrapper,
+    .game .judging-wait-wrapper,
+    .game .results-wrapper,
+    .game .judging-wrapper,
+    .game .picking-wrapper,
+    .game .finish-wrapper {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .game .black-card {
+        background: #303030 linear-gradient(180deg, #4f4f4f, #303030) repeat-x;
+        border-radius: 8px;
+        padding: 16px;
+    }
+
+    .game .white-card-template {
+        display: none;
+    }
+
+    .game .white-card {
+        background: #cdcdcd;
+        border-radius: 8px;
+        border: none;
+        padding: 16px;
+        color: #000;
+        margin: 4px auto;
+    }
+
+    .game .white-card-selection-flex {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .game .white-card-selection {
+        padding: 4px;
+        border: 2px solid #666666;
+        border-radius: 8px;
+    }
+
+    .game .white-card-selection:not(.disabled) {
+        cursor: pointer;
+    }
+
+    .game .white-card-selection .white-card {
+        margin: 4px;
+    }
+
+    .game .white-card-selection.active {
+        border-color: #FF550B;
+    }
+
+    .game .white-card-selection.active .white-card {
+        background: #FF550B;
+        color: #fff;
+    }
+
+    .game .white-card:focus {
+        padding: 12px;
+        border: 4px solid #FF550B;
+    }
+
+    .game .submit-buttons-wrapper {
+        z-index: 20;
+    }
+
+    .game .submit-buttons-wrapper .btn-group {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .game .white-card.active {
+        background: #FF550B;
+        color: #fff;
+    }
+
+    .mobile-ui-tabs,
+    .submit-buttons-wrapper {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #303030;
+        padding: 16px;
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+        display: block;
+        z-index: 10;
+    }
+}
+
+/**
+ DESKTOP GAME
+ */
+@media screen and (min-width: 768px) and (min-height: 781px) {
+    body.game-body {
+        position: absolute;
+        top: 0;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game-wrapper {
+        display: flex;
+        max-height: calc(100vh - 140px);
+        min-height: 600px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+
+    .game-wrapper .players {
+        width: 260px;
+        border-right: 1px solid #ccc;
+        padding: 8px;
+        overflow-y: auto;
+        flex-shrink: 0;
+    }
+
+    .game-wrapper .game {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .game .white-card-template:not(.white-card) {
+        width: 200px;
+        height: 200px;
+        border: 4px dotted #cdcdcd;
+        border-radius: 8px;
+        padding: 16px;
+    }
+
+    .game .black-card-wrapper {
+        display: block;
+        flex-shrink: 0;
+        max-width: 800px;
+        width: calc(100vw - 300px);
+        margin: 8px auto;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .game .black-card-flex {
+        display: flex;
+    }
+
+    .game .black-card-flex>div{
+        flex-shrink: 0;
+        margin: 8px auto 0 auto;
+    }
+
+    .game .white-card-wrapper,
+    .game .judge-pick-wrapper {
+        flex-grow: 1;
+        height: 100%;
+        overflow-y: auto;
+        max-width: 900px;
+        margin: 8px auto;
+    }
+
+    .game .white-card-flex {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 900px;
+        margin: 8px auto;
+    }
+
+    .game .white-card-selection-flex {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 8px auto;
+    }
+    
+    .game .white-card-selection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 4px;
+        margin: 8px;
+        border: 2px solid #666666;
+        border-radius: 8px;
+    }
+
+    .game .white-card-selection:not(.disabled) {
+        cursor: pointer;
+    }
+
+    .game .white-card-selection .white-card {
+        margin: 4px;
+    }
+
+    .game .white-card-selection.active {
+        border-color: #FF550B;
+    }
+
+    .game .white-card-selection.active .white-card {
+        background: #FF550B;
+        color: #fff;
+    }
+
+    .game .black-card {
+        width: 200px;
+        height: 200px;
+        background: #303030 linear-gradient(180deg, #4f4f4f, #303030) repeat-x;
+        border-radius: 8px;
+        padding: 16px;
+        overflow-y: auto;
+    }
+
+    .game .white-card {
+        width: 200px;
+        height: 200px;
+        background: #cdcdcd;
+        border-radius: 8px;
+        border: none;
+        padding: 16px;
+        color: #000;
+        margin: 4px auto;
+        overflow-y: auto;
+        flex-grow: 0;
+    }
+
+    .game .white-card-wrapper .white-card:not(.white-card-template) {
+        cursor: pointer;
+    }
+
+    .game .white-card-template.white-card {
+        border: 4px dotted #aaa;
+    }
+
+    .game .white-card:focus {
+        padding: 12px;
+        border: 4px solid #FF550B;
+    }
+
+    .game .submit-buttons-wrapper {
+        padding: 8px;
+        border-bottom-right-radius: 6px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .game .submit-buttons-wrapper .btn-group {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .game .white-card.active {
+        background: #FF550B;
+        color: #fff;
+    }
+
+    .game .judge-wait-wrapper,
+    .game .picking-wait-wrapper,
+    .game .judging-wait-wrapper,
+    .game .results-wrapper,
+    .game .judging-wrapper,
+    .game .picking-wrapper,
+    .game .finish-wrapper {
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    .mobile-ui-tabs {
+        display: none;
+    }
+}
+
+.game .finish-wrapper .players {
+    width: 100%;
+    border: none;
+}
+
+.game-wrapper .players .play-player {
+    display: flex;
+    justify-content: space-between;
+    background-color: #303030;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.game-wrapper .players .play-player i {
+    margin-right: 4px;
+}
+
+.game-wrapper .players .play-player.orange {
+    background: rgb(100, 40, 0);
+}
+
+.game .game-partial {
+    display: none;
+}
+
+.game .game-partial.active {
+    display: block;
+}
+
+
+/*
+.cah-card {
+    color: #fff;
+    background: #303030 linear-gradient(180deg, #4f4f4f, #303030) repeat-x;
+    border-color: #303030;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 8px;
+}
+
+.cah-card-content {
+    position: absolute;
+    height: 100%;
+    padding: 12px;
+}
+ */
