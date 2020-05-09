@@ -32,6 +32,6 @@ If everything is configured correctly, you should now be able to play the game.
 
 ## Special Thanks
 Special thanks for testing and bug reporting to:
-M.B., M.E., B.G., S.L., J.S.,L.S., A.?.
+M.B., M.E., B.G., S.L., J.S.,L.S., A.W.
 
 Developed by R.J.P.
